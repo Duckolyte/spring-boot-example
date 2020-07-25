@@ -28,4 +28,15 @@ public class ExampleOneResourceController {
         return exampleOneResourceService.createExampleOneResource(exampleOneResource);
     }
 
+    @RequestMapping(method = RequestMethod.PUT, value = "/example-ones/{id}")
+    public ExampleOneResource updateExampleOneResource(@RequestBody ExampleOneResource exampleOneResource, @PathVariable String id) {
+        return exampleOneResourceService.update(exampleOneResource, id);
+    }
+
+    @RequestMapping(method = RequestMethod.DELETE, value = "/example-ones/{id}")
+    public String  deleteExampleOneResource(@PathVariable String id) {
+        return exampleOneResourceService.delete(id);
+    }
+
+
 }

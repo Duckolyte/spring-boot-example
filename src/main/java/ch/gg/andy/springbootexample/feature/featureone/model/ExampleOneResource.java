@@ -19,4 +19,9 @@ public class ExampleOneResource {
         return exampleProp;
     }
 
+    public ExampleOneResource setExampleProp(String exampleProp) {
+        this.exampleProp = exampleProp;
+        return this;
+    }
+
 }
