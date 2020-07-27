@@ -1,9 +1,17 @@
 package ch.gg.andy.springbootexample.feature.featureone.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class ExampleOneResource {
 
+    @Id
     private String id;
     private String exampleProp;
+
+    public ExampleOneResource() {
+    }
 
     public ExampleOneResource(String id, String exampleProp) {
         this.id = id;

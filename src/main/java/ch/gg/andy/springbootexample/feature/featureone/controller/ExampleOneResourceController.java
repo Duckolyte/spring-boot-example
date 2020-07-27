@@ -30,7 +30,7 @@ public class ExampleOneResourceController {
 
     @RequestMapping(method = RequestMethod.PUT, value = "/example-ones/{id}")
     public ExampleOneResource updateExampleOneResource(@RequestBody ExampleOneResource exampleOneResource, @PathVariable String id) {
-        return exampleOneResourceService.update(exampleOneResource, id);
+        return exampleOneResourceService.update(exampleOneResource);
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/example-ones/{id}")
